@@ -1,5 +1,7 @@
-npmRun.exec('mocha --debug-brk --sort', {cwd: __dirname + '/tests'}, function (err, stdout, stderr) {
-  // err Error or null if there was no error 
-  // stdout Buffer|String 
-  // stderr Buffer|String 
+const npmRun = require('npm-run')
+
+npmRun.exec('knex seed:run', (err, stdout, stderr) => {
+  console.log(err)
+  console.log(stdout)
+  console.log(stderr) 
 })
